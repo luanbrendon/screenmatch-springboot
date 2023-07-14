@@ -10,13 +10,22 @@
 
 <table>
     <thead>
-    <tr th:each="filme : ${lista}">
-        <th th:text="${filme.nome}">NOME</th>
-        <th th:text="${filme.duracaoEmMinutos}">DURAÇÃO</th>
-        <th th:text="${filme.anoLancamento}">ANO DE LANÇAMENTO</th>
-        <th th:text="${filme.genero}">GÊNERO</th>
+    <tr>
+        <th>NOME</th>
+        <th>DURAÇÃO</th>
+        <th>ANO DE LANÇAMENTO</th>
+        <th>GÊNERO</th>
     </tr>
     </thead>
+
+    <tbody>
+    <tr th:each="filme : ${lista}">
+        <td th:text="${filme.nome}"></td>
+        <td th:text="${filme.duracaoEmMinutos}"></td>
+        <td th:text="${filme.anoLancamento}"></td>
+        <td th:text="${filme.genero}"></td>
+    </tr>
+    </tbody>
 </table>
 
 </body>

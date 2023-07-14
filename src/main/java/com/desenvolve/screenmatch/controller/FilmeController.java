@@ -21,12 +21,12 @@ public class FilmeController {
         return "filmes/formulario";
     }
 
-    @GetMapping
+    @GetMapping()
     public String carregaPaginaListagem(Model model) {
         model.addAttribute("lista", filmes);
-        return"Filmes/listagem";
+        return "filmes/listagem";
     }
-@PostMapping
+@PostMapping()
     public String cadastraFilme(dadosCadastroFilme dados) {
         var filme = new Filme(dados);
         filmes.add(filme);

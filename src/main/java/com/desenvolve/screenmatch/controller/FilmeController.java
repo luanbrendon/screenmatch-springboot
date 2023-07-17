@@ -1,7 +1,7 @@
 package com.desenvolve.screenmatch.controller;
 
 import com.desenvolve.screenmatch.model.filme.Filme;
-import com.desenvolve.screenmatch.model.filme.dadosCadastroFilme;
+import com.desenvolve.screenmatch.model.filme.DadosCadastroFilme;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,10 +27,10 @@ public class FilmeController {
         return "filmes/listagem";
     }
 @PostMapping()
-    public String cadastraFilme(dadosCadastroFilme dados) {
+    public String cadastraFilme(DadosCadastroFilme dados) {
         var filme = new Filme(dados);
         filmes.add(filme);
 
-        return "filmes/formulario";
+        return "redirect:/filmes";
     }
 }
